@@ -2,14 +2,14 @@ body{
   border-style: ridge;
   border-width: 7px;
   border-color: black;
-  background-color: darkgrey;
+  background-color: silver;
 }
 
 
 
 
 h2{
-  color: darkblue;
+  color: red;
   text-decoration: underline;
   font-size: 200%;
   margin: 20px;
@@ -57,7 +57,32 @@ img{
   max-height: auto;
   margin-left: 100px;
   margin-right: 40px;
-  margin-bottom: 80px;
+ 
   float: right;
   border: solid 5px black;
+}
+
+h3{
+  color: darkslategray;
+  text-decoration: underline;
+  font-size: 200%;
+  margin: 20px;
+  margin-left: 50px;
+  padding-top: 20px;
+  text-align: center;
+  inset-inline: center;
+  border-top: firebrick inset;
+
+}
+
+ol{
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 110%;
+  
+}
+
+li{
+  margin-bottom: 10px;
+  
 }
