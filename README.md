@@ -23,3 +23,16 @@ submission PR
 Any Links you used as reference
 Reflections and Comments
 This lab was much more difficult. Loops are very confusing but over all it went well. I got some help and once i figured out what I needed to do it didnt take too long. The final part about adding the total of correct answers I figured out how to do all on my own. 
+
+
+LAB - 04
+About me
+
+My partners and I turned all of my previous code into seperate functions for each question. We did it as a paired programming session.
+
+Author: Alan Monkman & Nicholas Mercado
+Links and Resources
+submission PR
+Any Links you used as reference
+Reflections and Comments
+This lab was very simple. It was a nice break from doing really hard labs recently.
