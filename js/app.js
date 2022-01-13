@@ -120,32 +120,24 @@ while(Guesses !== 0){
 }
 // question 7
 
-let myArr = [mango, banana, kiwi, apple, orange, peach, cantaloupe, watermelon, nectarine];
+let myArr = ['mango', 'banana', 'cantaloupe'];
 
 let fruitGuess = 6;
 
-let faveFruits = 'mango, cantaloupe, banana';
-
 while(fruitGuess !== 0){
-  let answerSeven = prompt('Hey ' + user + 'can you guess what some of my favorite fruits are?').toLowerCase();
+  let answerSeven = prompt('Hey ' + user + ' can you guess what some of my favorite fruits are?').toLowerCase();
 
-  if(answerSeven == faveFruits){
-    alert('Yes! ' + answerSeven + '\'s are one of my favorites!');
-    break;
+  for(let i = 0; i < myArr.length; i++){
+
+    if(answerSeven === myArr[i]){
+      alert('Yes! ' + answerSeven + '\'s are one of my favorites!');
+      fruitGuess = 1;
+      break;
+    }
   }
-
-  if(fruitGuess == 0){
-    alert('Better luck next time! Mangoes, bananas, and cantaloupes are my favorites!');
-    break;
-  }
-
-  else{
-    fruitGuess --;
-    alert('Sorry, that\'s not one of my favorites. Try again!');
-  }
-
-  
+  fruitGuess--;
 }
+alert('Mango\'s, Banana\'s, and Cantaloupe\'s are my favorite fruits!');
 
 
 
