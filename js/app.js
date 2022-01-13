@@ -4,11 +4,6 @@ let user = prompt('What is your name?');
 alert('Welcome to my page ' + user + '!');
 alert('Please answer the following questions with either yes or no.');
 
-let answerOne = prompt('Is my name Alan?').toLowerCase();
-let answerTwo = prompt('Am I from Washington?').toLowerCase();
-let answerThree = prompt('Was my last job at USPS?').toLowerCase();
-let answerFour = prompt('Have I been to Vietnam?').toLowerCase();
-let answerFive = prompt('Did I graduate from Inglemoor High School?').toLowerCase();
 let myNumber = 17;
 let Guesses = 4;
 let myArr = ['mango', 'banana', 'cantaloupe'];
@@ -21,9 +16,11 @@ questionThree();
 questionFour();
 questionFive();
 questionSix();
+questionSeven();
 // question 1
 
 function questionOne() {
+  let answerOne = prompt('Is my name Alan?').toLowerCase();
   if (answerOne === 'yes' || answerOne === 'y') {
     // console.log('yes');
     alert('Yeah! How\'d you know?');
@@ -35,29 +32,31 @@ function questionOne() {
   }
   else {
     // console.log('follow instructions');
-    alert('Please answer with either yes or no :)');
+    alert('Please answer with either yes or no.');
   }
 }
 // question 2
 
 function questionTwo() {
+  let answerTwo = prompt('Am I from Washington?').toLowerCase();
   if (answerTwo === 'yes' || answerTwo === 'y') {
     // console.log('yes');
     alert('Yeah! I am a true Washingtonian.');
     total = total + 1;
   }
-  else if (answerTwo === 'no' || answerTwo === "n") {
+  else if (answerTwo === 'no' || answerTwo === 'n') {
     // console.log('no');
     alert('Sorry! Washington is where I call home.');
   }
   else {
     // console.log('follow instructions');
-    alert('Please answer with either yes or no :)');
+    alert('Please answer with either yes or no.');
   }
 }
 // question 3
 
 function questionThree() {
+  let answerThree = prompt('Was my last job at USPS?').toLowerCase();
   if (answerThree === 'yes' || answerThree === 'y') {
     // console.log('yes');
     alert('Thats correct! I just left the post office a couple weeks ago.');
@@ -69,12 +68,13 @@ function questionThree() {
   }
   else {
     // console.log('follow instructions');
-    alert('Please answer with either yes or no :)');
+    alert('Please answer with either yes or no.');
   }
 }
 // question 4
 
 function questionFour() {
+  let answerFour = prompt('Have I been to Vietnam?').toLowerCase();
   if (answerFour === 'yes' || answerFour === 'y') {
     // console.log('yes');
     alert('Yeah! Vietnam was a very beautiful place to visit.');
@@ -86,12 +86,13 @@ function questionFour() {
   }
   else {
     // console.log('follow instructions');
-    alert('Please answer with either yes or no :)');
+    alert('Please answer with either yes or no.');
   }
 }
 // question 5
 
 function questionFive() {
+  let answerFive = prompt('Did I graduate from Inglemoor High School?').toLowerCase();
   if (answerFive === 'yes' || answerFive === 'y') {
     // console.log('yes');
     alert('That is correct ' + user + '!');
@@ -138,22 +139,22 @@ function questionSix() {
 // question 7
 
 
+function questionSeven() {
+  while (fruitGuess !== 0) {
+    let answerSeven = prompt('Hey ' + user + ' can you guess what some of my favorite fruits are?').toLowerCase();
 
-while (fruitGuess !== 0) {
-  let answerSeven = prompt('Hey ' + user + ' can you guess what some of my favorite fruits are?').toLowerCase();
+    for (let i = 0; i < myArr.length; i++) {
 
-  for (let i = 0; i < myArr.length; i++) {
-
-    if (answerSeven === myArr[i]) {
-      alert('Yes! ' + answerSeven + '\'s are one of my favorites!');
-      total = total + 1;
-      fruitGuess = 1;
-      break;
+      if (answerSeven === myArr[i]) {
+        alert('Yes! ' + answerSeven + '\'s are one of my favorites!');
+        total = total + 1;
+        fruitGuess = 1;
+        break;
+      }
     }
+    fruitGuess--;
   }
-  fruitGuess--;
+  alert('Mango\'s, Banana\'s, and Cantaloupe\'s are my favorite fruits!');
+
+  alert('Great job ' + user + ' ! You got ' + total + ' correct.');
 }
-alert('Mango\'s, Banana\'s, and Cantaloupe\'s are my favorite fruits!');
-
-alert('Great job ' + user + ' ! You got ' + total + ' correct.');
-
