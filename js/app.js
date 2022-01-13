@@ -133,10 +133,10 @@ let myArr = ['mango', 'banana', 'cantaloupe'];
 
 let fruitGuess = 6;
 
-while (fruitGuess !== 0) {
+while(fruitGuess !== 0) {
   let answerSeven = prompt('Hey ' + user + ' can you guess what some of my favorite fruits are?').toLowerCase();
 
-  for (let i = 0; i < myArr.length; i++) {
+  for(let i = 0; i < myArr.length; i++) {
 
     if (answerSeven === myArr[i]) {
       alert('Yes! ' + answerSeven + '\'s are one of my favorites!');
