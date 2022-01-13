@@ -4,12 +4,23 @@ let user = prompt('What is your name?');
 alert('Welcome to my page ' + user + '!');
 alert('Please answer the following questions with either yes or no.');
 
-let total = 0
+let answerOne = prompt('Is my name Alan?').toLowerCase();
+let answerTwo = prompt('Am I from Washington?').toLowerCase();
+let answerThree = prompt('Was my last job at USPS?').toLowerCase();
+let answerFour = prompt('Have I been to Vietnam?').toLowerCase();
+let answerFive = prompt('Did I graduate from Inglemoor High School?').toLowerCase();
+let myNumber = 17;
+let Guesses = 4;
+let myArr = ['mango', 'banana', 'cantaloupe'];
+let fruitGuess = 6;
+let total = 0;
 
+questionOne();
+questionTwo();
+questionThree();
 // question 1
 
-let answerOne = prompt('Is my name Alan?').toLowerCase();
-
+function questionOne(){
 if (answerOne === 'yes' || answerOne === 'y') {
   // console.log('yes');
   alert('Yeah! How\'d you know?');
@@ -23,11 +34,10 @@ else {
   // console.log('follow instructions');
   alert('Please answer with either yes or no :)');
 }
-
+}
 // question 2
 
-let answerTwo = prompt('Am I from Washington?').toLowerCase();
-
+function questionTwo(){
 if (answerTwo === 'yes' || answerTwo === 'y') {
   // console.log('yes');
   alert('Yeah! I am a true Washingtonian.');
@@ -41,11 +51,10 @@ else {
   // console.log('follow instructions');
   alert('Please answer with either yes or no :)');
 }
-
+}
 // question 3
 
-let answerThree = prompt('Was my last job at USPS?').toLowerCase();
-
+function questionThree(){
 if (answerThree === 'yes' || answerThree === 'y') {
   // console.log('yes');
   alert('Thats correct! I just left the post office a couple weeks ago.');
@@ -59,10 +68,9 @@ else {
   // console.log('follow instructions');
   alert('Please answer with either yes or no :)');
 }
-
+}
 // question 4
 
-let answerFour = prompt('Have I been to Vietnam?').toLowerCase();
 
 if (answerFour === 'yes' || answerFour === 'y') {
   // console.log('yes');
@@ -80,7 +88,6 @@ else {
 
 // question 5
 
-let answerFive = prompt('Did I graduate from Inglemoor High School?').toLowerCase();
 
 if (answerFive === 'yes' || answerFive === 'y') {
   // console.log('yes');
@@ -99,8 +106,6 @@ else {
 
 // question 6
 
-let myNumber = 17;
-let Guesses = 4;
 
 while (Guesses !== 0) {
   let answerSix = prompt('Alright, ' + user + ' I want you to pick a number from 1 through 27.');
@@ -129,9 +134,7 @@ while (Guesses !== 0) {
 
 // question 7
 
-let myArr = ['mango', 'banana', 'cantaloupe'];
 
-let fruitGuess = 6;
 
 while(fruitGuess !== 0) {
   let answerSeven = prompt('Hey ' + user + ' can you guess what some of my favorite fruits are?').toLowerCase();
