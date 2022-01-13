@@ -18,6 +18,7 @@ let total = 0;
 questionOne();
 questionTwo();
 questionThree();
+questionFour();
 // question 1
 
 function questionOne(){
@@ -71,7 +72,7 @@ else {
 }
 // question 4
 
-
+function questionFour(){
 if (answerFour === 'yes' || answerFour === 'y') {
   // console.log('yes');
   alert('Yeah! Vietnam was a very beautiful place to visit.');
@@ -85,7 +86,7 @@ else {
   // console.log('follow instructions');
   alert('Please answer with either yes or no :)');
 }
-
+}
 // question 5
 
 
