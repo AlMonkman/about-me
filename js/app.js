@@ -4,6 +4,8 @@ let user = prompt('What is your name?');
 alert('Welcome to my page ' + user +'!');
 alert('Please answer the following questions with either yes or no.');
 
+let total = 0
+
 // question 1
 
 let answerOne = prompt('Is my name Alan?').toLowerCase();
@@ -11,6 +13,7 @@ let answerOne = prompt('Is my name Alan?').toLowerCase();
 if(answerOne === 'yes' || answerOne === 'y') {
   // console.log('yes');
   alert('Yeah! How\'d you know?');
+  total = total+1;
 }
 else if(answerOne === 'no' || answerOne === 'n'){
   // console.log('no');
@@ -28,6 +31,7 @@ let answerTwo = prompt('Am I from Washington?').toLowerCase();
 if(answerTwo === 'yes' || answerTwo === 'y'){
   // console.log('yes');
   alert('Yeah! I am a true Washingtonian.');
+  total = total+1;
 }
 else if(answerTwo === 'no' || answerTwo === "n"){
   // console.log('no');
@@ -45,6 +49,7 @@ let answerThree = prompt('Was my last job at USPS?').toLowerCase();
 if(answerThree === 'yes' || answerThree === 'y'){
   // console.log('yes');
   alert('Thats correct! I just left the post office a couple weeks ago.');
+  total = total+1;
 }
 else if(answerThree === 'no' || answerThree ==='n'){
   // console.log('no');
@@ -62,6 +67,7 @@ let answerFour = prompt('Have I been to Vietnam?').toLowerCase();
 if(answerFour === 'yes' || answerFour === 'y'){
   // console.log('yes');
   alert('Yeah! Vietnam was a very beautiful place to visit.');
+  total = total+1;
 }
 else if(answerFour === 'no' || answerFour === 'n'){
   // console.log('no');
@@ -79,6 +85,7 @@ let answerFive = prompt('Did I graduate from Inglemoor High School?').toLowerCas
 if(answerFive === 'yes' || answerFive === 'y'){
   // console.log('yes');
   alert('That is correct ' + user + '!');
+  total = total+1;
 }
 else if(answerFive === 'no' || answerFive === 'n'){
   // console.log('no');
@@ -110,6 +117,7 @@ while(Guesses !== 0){
 
   if(answerSix == myNumber){
    alert('Wow! Good job, that\'s exactly the number I was thinking.');
+   total = total+1;
    break;
  }
 
@@ -131,6 +139,7 @@ while(fruitGuess !== 0){
 
     if(answerSeven === myArr[i]){
       alert('Yes! ' + answerSeven + '\'s are one of my favorites!');
+      total = total+1;
       fruitGuess = 1;
       break;
     }
@@ -139,75 +148,5 @@ while(fruitGuess !== 0){
 }
 alert('Mango\'s, Banana\'s, and Cantaloupe\'s are my favorite fruits!');
 
+alert('Great job ' + user + ' ! You got ' + total + ' correct.');
 
-
-
-
-// Array
-
-// let myArr = [1, 'hello', [2,3], true];
-// console.log(myArr);
-// console.table(myArr);
-
-// console.log(myArr[0]);
-
-// let favBoybands = ['BTS', 'Backstreet boys', 'Nsync'];
-
-// console.table(favBoyBands);
-
-// let arrLength = favBoyBands.length;
-
-// console.log(favBoyBands[favBoyBands.length-1]); accessing the last element
-
-// console.log(arrLength);
-
-// myArr[4] = false; add to array
- 
-// favBoyBands.push(); will add to end of array
-
-// favBoyBands.pop(); will remove last element from array
-
-
-// Loops
-
-// For loops
-// great for doing something a certain amount of times
-// great for iterating through/ over arrays
-// i++ means let i = i+1
-
-// for(starting val; condition; increment){
-// code block 
-// }
-
-//  let students = ['alan', 'bob', 'brady', 'lauren', 'nick', 'jefferey', 'steve']
-
-// for(let i = 0; i < students.length; i++){
-// console,log(students[i]);
-// if(students[i] === "steve'){
-// console.log('hey steve');
-// }
-
-
-
-// While loops
-
-// while(condition){
-// do something 
-// }
- 
-// let myNumber = 3;
-
-// let userNumber = prompt('what number am i thinking of?');
-
-// while(userNumber != myNumber){
-// userNumber = prompt('What number am i thinking of?');
-// }
-// 
-//  let clueGuesses = 20;
-// let suspect = 'Nicholas';
-// let foundSuspect = false;
-
-// while(clueGuesses && !foundSuspect){
-// let ourGuess = getRandomStudent();
-// console.log('it was ${ourGuess}, in Remo with the candlestick');
-// }
