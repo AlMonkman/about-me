@@ -19,128 +19,130 @@ questionOne();
 questionTwo();
 questionThree();
 questionFour();
+questionFive();
+questionSix();
 // question 1
 
-function questionOne(){
-if (answerOne === 'yes' || answerOne === 'y') {
-  // console.log('yes');
-  alert('Yeah! How\'d you know?');
-  total = total + 1;
-}
-else if (answerOne === 'no' || answerOne === 'n') {
-  // console.log('no');
-  alert('Sorry but my name is Alan!');
-}
-else {
-  // console.log('follow instructions');
-  alert('Please answer with either yes or no :)');
-}
+function questionOne() {
+  if (answerOne === 'yes' || answerOne === 'y') {
+    // console.log('yes');
+    alert('Yeah! How\'d you know?');
+    total = total + 1;
+  }
+  else if (answerOne === 'no' || answerOne === 'n') {
+    // console.log('no');
+    alert('Sorry but my name is Alan!');
+  }
+  else {
+    // console.log('follow instructions');
+    alert('Please answer with either yes or no :)');
+  }
 }
 // question 2
 
-function questionTwo(){
-if (answerTwo === 'yes' || answerTwo === 'y') {
-  // console.log('yes');
-  alert('Yeah! I am a true Washingtonian.');
-  total = total + 1;
-}
-else if (answerTwo === 'no' || answerTwo === "n") {
-  // console.log('no');
-  alert('Sorry! Washington is where I call home.');
-}
-else {
-  // console.log('follow instructions');
-  alert('Please answer with either yes or no :)');
-}
+function questionTwo() {
+  if (answerTwo === 'yes' || answerTwo === 'y') {
+    // console.log('yes');
+    alert('Yeah! I am a true Washingtonian.');
+    total = total + 1;
+  }
+  else if (answerTwo === 'no' || answerTwo === "n") {
+    // console.log('no');
+    alert('Sorry! Washington is where I call home.');
+  }
+  else {
+    // console.log('follow instructions');
+    alert('Please answer with either yes or no :)');
+  }
 }
 // question 3
 
-function questionThree(){
-if (answerThree === 'yes' || answerThree === 'y') {
-  // console.log('yes');
-  alert('Thats correct! I just left the post office a couple weeks ago.');
-  total = total + 1;
-}
-else if (answerThree === 'no' || answerThree === 'n') {
-  // console.log('no');
-  alert('Actually my last job was with USPS!');
-}
-else {
-  // console.log('follow instructions');
-  alert('Please answer with either yes or no :)');
-}
+function questionThree() {
+  if (answerThree === 'yes' || answerThree === 'y') {
+    // console.log('yes');
+    alert('Thats correct! I just left the post office a couple weeks ago.');
+    total = total + 1;
+  }
+  else if (answerThree === 'no' || answerThree === 'n') {
+    // console.log('no');
+    alert('Actually my last job was with USPS!');
+  }
+  else {
+    // console.log('follow instructions');
+    alert('Please answer with either yes or no :)');
+  }
 }
 // question 4
 
-function questionFour(){
-if (answerFour === 'yes' || answerFour === 'y') {
-  // console.log('yes');
-  alert('Yeah! Vietnam was a very beautiful place to visit.');
-  total = total + 1;
-}
-else if (answerFour === 'no' || answerFour === 'n') {
-  // console.log('no');
-  alert('Sorry but I actually spent a month in Vietnam!');
-}
-else {
-  // console.log('follow instructions');
-  alert('Please answer with either yes or no :)');
-}
+function questionFour() {
+  if (answerFour === 'yes' || answerFour === 'y') {
+    // console.log('yes');
+    alert('Yeah! Vietnam was a very beautiful place to visit.');
+    total = total + 1;
+  }
+  else if (answerFour === 'no' || answerFour === 'n') {
+    // console.log('no');
+    alert('Sorry but I actually spent a month in Vietnam!');
+  }
+  else {
+    // console.log('follow instructions');
+    alert('Please answer with either yes or no :)');
+  }
 }
 // question 5
 
-
-if (answerFive === 'yes' || answerFive === 'y') {
-  // console.log('yes');
-  alert('That is correct ' + user + '!');
-  total = total + 1;
+function questionFive() {
+  if (answerFive === 'yes' || answerFive === 'y') {
+    // console.log('yes');
+    alert('That is correct ' + user + '!');
+    total = total + 1;
+  }
+  else if (answerFive === 'no' || answerFive === 'n') {
+    // console.log('no');
+    alert('Wrong answer ' + user + '.');
+  }
+  else {
+    // console.log('follow instructions');
+    alert('Please answer with either yes or no');
+  }
 }
-else if (answerFive === 'no' || answerFive === 'n') {
-  // console.log('no');
-  alert('Wrong answer ' + user + '.');
-}
-else {
-  // console.log('follow instructions');
-  alert('Please answer with either yes or no :)');
-}
-
 
 // question 6
 
+function questionSix() {
+  while (Guesses !== 0) {
+    let answerSix = prompt('Alright, ' + user + ' I want you to pick a number from 1 through 27.');
 
-while (Guesses !== 0) {
-  let answerSix = prompt('Alright, ' + user + ' I want you to pick a number from 1 through 27.');
+    if (answerSix < myNumber) {
+      Guesses--;
+      alert('Too low!');
+    }
 
-  if (answerSix < myNumber) {
-    Guesses--;
-    alert('Too low!');
+    if (answerSix > myNumber) {
+      Guesses--;
+      alert('Too high!');
+    }
+
+    if (+answerSix === myNumber) {
+      alert('Wow! Good job, that\'s exactly the number I was thinking.');
+      total = total + 1;
+      break;
+    }
+
+    if (Guesses === 0) {
+      alert('Good try! My number was actually 17');
+    }
+
   }
-
-  if (answerSix > myNumber) {
-    Guesses--;
-    alert('Too high!');
-  }
-
-  if (+answerSix === myNumber) {
-    alert('Wow! Good job, that\'s exactly the number I was thinking.');
-    total = total + 1;
-    break;
-  }
-
-  if (Guesses === 0) {
-    alert('Good try! My number was actually 17');
-  }
-
 }
-
 // question 7
 
 
 
-while(fruitGuess !== 0) {
+while (fruitGuess !== 0) {
   let answerSeven = prompt('Hey ' + user + ' can you guess what some of my favorite fruits are?').toLowerCase();
 
-  for(let i = 0; i < myArr.length; i++) {
+  for (let i = 0; i < myArr.length; i++) {
 
     if (answerSeven === myArr[i]) {
       alert('Yes! ' + answerSeven + '\'s are one of my favorites!');
